@@ -189,6 +189,18 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline-offs
 .footer-bottom { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); font-size: .85rem; }
 .footer-bottom p { margin: 0; }
 
+/* ---------- Photo slider (swipe, click or auto) ---------- */
+.slider { min-width: 0; }
+.slider__track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.slider__track::-webkit-scrollbar { display: none; }
+.slider__slide { flex: 0 0 100%; scroll-snap-align: start; }
+.slider__controls { display: none; align-items: center; gap: .5rem; margin-top: .75rem; }
+.js .slider__controls { display: flex; }
+.slider__btn { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding: 0 .75rem; background: none; border: 1px solid var(--rule); border-radius: 3px; color: var(--cream); font: inherit; font-size: .9rem; cursor: pointer; }
+.slider__btn:hover { border-color: var(--brass); color: var(--brass-lt); }
+.slider__count { min-width: 3.5rem; color: var(--muted); font-size: .9rem; text-align: center; }
+.slider__pause { margin-left: auto; }
+
 /* ---------- Tablet: 768px and up ---------- */
 @media (min-width: 768px) {
   .grid--2, .grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }

@@ -57,7 +57,21 @@
           <p>We took it back to bare metal, cut a serving hatch into the side, lined the inside with timber and painted the outside matte black. It now has cold storage, a full-length bar top and enough room for the bartenders to work without bumping elbows.</p>
           <p class="muted">The name comes from the trailer&rsquo;s first job. A trough is where you water the horses. Ours just pours something better.</p>
         </div>
-        <div class="ph" role="img" aria-label="[IMAGE: the horse trailer before conversion, mid-build in the workshop]"><span>[IMAGE: the horse trailer before conversion, mid-build in the workshop]</span></div>
+        <!-- Photo slider: add or remove .slider__slide blocks as needed; main.js handles the rest -->
+        <div class="slider" data-slider role="region" aria-roledescription="carousel" aria-label="Photos of the trailer conversion">
+          <div class="slider__track" tabindex="0">
+            <div class="slider__slide" role="group" aria-label="Photo 1 of 4"><div class="ph" role="img" aria-label="[IMAGE: the horse trailer as we found it, before the conversion]"><span>[IMAGE: the horse trailer as we found it, before the conversion]</span></div></div>
+            <div class="slider__slide" role="group" aria-label="Photo 2 of 4"><div class="ph" role="img" aria-label="[IMAGE: stripped back to the frame in the workshop]"><span>[IMAGE: stripped back to the frame in the workshop]</span></div></div>
+            <div class="slider__slide" role="group" aria-label="Photo 3 of 4"><div class="ph" role="img" aria-label="[IMAGE: serving hatch cut in and timber lining going on]"><span>[IMAGE: serving hatch cut in and timber lining going on]</span></div></div>
+            <div class="slider__slide" role="group" aria-label="Photo 4 of 4"><div class="ph" role="img" aria-label="[IMAGE: the finished bar: matte black trailer with the hatch open]"><span>[IMAGE: the finished bar: matte black trailer with the hatch open]</span></div></div>
+          </div>
+          <div class="slider__controls">
+            <button class="slider__btn" type="button" data-prev aria-label="Previous photo">&larr;</button>
+            <span class="slider__count" data-count>1 / 4</span>
+            <button class="slider__btn" type="button" data-next aria-label="Next photo">&rarr;</button>
+            <button class="slider__btn slider__pause" type="button" data-pause>Pause</button>
+          </div>
+        </div>
       </div>
     </section>
 
