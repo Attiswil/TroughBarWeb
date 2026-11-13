@@ -93,22 +93,23 @@ ul, ol { margin: 0 0 1em; padding-left: 1.2em; }
   color: var(--cream); font-size: .85rem; text-align: center;
 }
 .ph span { max-width: 30ch; }
-.ph--wide, .ph--hero { aspect-ratio: 3 / 2; }
-.ph--tall { aspect-ratio: 4 / 5; }
+.photo { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; background: var(--char); border-radius: 3px; }
+.ph--wide, .ph--hero, .photo--wide, .photo--hero { aspect-ratio: 3 / 2; }
+.ph--tall, .photo--tall { aspect-ratio: 4 / 5; }
 figure { margin: 0; }
 
 /* ---------- Hero ---------- */
 .hero { padding: clamp(2.5rem, 7vw, 5.5rem) 0 var(--space); background: radial-gradient(ellipse at 85% 0%, rgba(107, 74, 47, .4), transparent 60%); }
 .hero h1 { max-width: 15ch; }
 .hero .lead { max-width: 34rem; }
-.hero .ph { margin-top: clamp(2.5rem, 6vw, 4.5rem); }
+.hero .ph, .hero .photo { margin-top: clamp(2.5rem, 6vw, 4.5rem); }
 .page-hero { padding: clamp(2.5rem, 7vw, 5.5rem) 0 clamp(2.5rem, 6vw, 4rem); }
 .page-hero h1 { max-width: 18ch; font-size: clamp(2.5rem, 8vw, 4.75rem); }
 .page-hero .lead { max-width: 38rem; margin-bottom: 0; }
 
 /* ---------- Content blocks ---------- */
 .card { padding: clamp(1.25rem, 3.5vw, 2rem); background: var(--black); border: 1px solid var(--brass); border-radius: 3px; }
-.block .ph { margin-bottom: 1.5rem; }
+.block .ph, .block .photo { margin-bottom: 1.5rem; }
 .block > :last-child { margin-bottom: 0; }
 .block p { color: var(--muted); }
 .block .more { margin-top: .25rem; }
@@ -208,8 +209,8 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline-offs
   .plain-list--2 li { break-inside: avoid; }
   .form { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .field--full { grid-column: 1 / -1; }
-  .ph--wide { aspect-ratio: 16 / 9; }
-  .ph--hero { aspect-ratio: 2 / 1; }
+  .ph--wide, .photo--wide { aspect-ratio: 16 / 9; }
+  .ph--hero, .photo--hero { aspect-ratio: 2 / 1; }
   .footer-grid { grid-template-columns: 1.4fr 1fr 1fr; gap: 3rem; }
 }
 
@@ -228,7 +229,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline-offs
   .cols { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 4rem; }
   .cols--even { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5rem; align-items: center; }
   .cols--flip > :first-child { order: 2; }
-  .ph--hero { aspect-ratio: 21 / 9; }
+  .ph--hero, .photo--hero { aspect-ratio: 21 / 9; }
 }
 
 /* ---------- Reduced motion ---------- */
